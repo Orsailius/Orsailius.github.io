@@ -1,0 +1,20 @@
+﻿<div>
+    <jm-cem-fig-nav class="col-md-2"></jm-cem-fig-nav>
+    <div class="col-md-10"> 
+        <div class="container-fluid">       
+            <div class="row">
+                <div class="col-md-2" ng-repeat="hero in heroes">
+                    <a href="#" ng-click="setHero(hero.id)" class="thumbnail">
+                        <img src="{{hero.icon}}" />
+                        <div class="caption" style="margin: 0 auto;text-align:center">
+                            {{hero.name}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <jm-heroes></jm-heroes>
+        </div>
+    </div>
+</div>

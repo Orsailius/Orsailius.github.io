@@ -1,0 +1,18 @@
+﻿<div class="col-md-2">
+    <div>
+        New
+        <ul ng-repeat="item in newItems | filter:{isUpcoming:'false'}">
+            <li>
+                <a href="{{item.url}}">{{item.description}}</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        Upcoming
+        <ul ng-repeat ="item in newItems">
+            <li>
+                <a href="{{item.url}}">{{item.description}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

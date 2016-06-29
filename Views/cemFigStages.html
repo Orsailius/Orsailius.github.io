@@ -1,0 +1,17 @@
+﻿<div>
+    <jm-cem-fig-nav class="col-md-2"></jm-cem-fig-nav>
+    <div class="col-md-10">
+        <div class="row">
+            <ul class="nav nav-pills">
+                <li role="presentation" ng-repeat="stage in stages" ng-class="{active: stage.id== stageId}">
+                    <a ng-click="setStage(stage.id)" href="#">
+                        {{stage.name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid">
+            <jm-stages></jm-stages>
+        </div>
+    </div>
+</div>

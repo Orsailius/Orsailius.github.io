@@ -1,0 +1,21 @@
+﻿<div>
+    <jm-cem-fig-nav class="col-md-2"></jm-cem-fig-nav>
+    <div class="col-md-10">   
+        <div class="col-md-10">     
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" ng-repeat="slot in itemSlots" ng-class="{active: slot.id == slotId}">
+                    <a href="#" ng-click="setItemSlot(slot.id)" class="thumbnail">
+                        <img src="{{slot.icon}}" style="width:52px" />
+                        <div class="caption">
+                            {{slot.name}}
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="horizontalgap" style="height:20px"></div>
+        </div>
+        <div class="container-fluid">
+            <jm-item-slots></jm-item-slots>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+﻿<div>
+    <ul ng-repeat="link in links" class="nav nav-pills nav-stacked">
+        <li role="presentation" ng-class="{active: link.link == activeLink}">
+            <a href="{{link.link}}">{{link.name}}</a>
+        </li>
+    </ul>
+</div>

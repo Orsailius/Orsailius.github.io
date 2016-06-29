@@ -1,0 +1,26 @@
+﻿<div ng-cloak>
+    <div class="horizontalgap" style="height:10px"></div>
+    <div class="row">        
+        <div class="col-md-3 thumbnail">
+            <img class="img-responsive" src="https://drive.google.com/uc?export=download&id={{stages[stageId-1].cssTheme}}">
+        </div>
+        <div class="col-md-7">
+            <h1>{{stages[stageId-1].name}}</h1>
+            <p>{{stages[stageId-1].description}}</p>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div ng-repeat="monster in monsters | orderBy:monster.isBoss:true">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="/images/CemeteryFighter/Characters/{{monster.image}}" style="width:48px">
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">{{monster.name}}</h3>
+                    {{monster.description}}    
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>

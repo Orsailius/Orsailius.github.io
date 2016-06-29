@@ -1,0 +1,18 @@
+﻿<div class="bg-danger validationErrors" ng-show="validationErrors">
+    <ul>
+        <li ng-repeat="error in validationErrors">{{error}}</li>
+    </ul>
+</div> 
+
+<div class="form-group">
+    <label for="Name">Emblem Id</label>
+    <input name="Name" type="number" class="form-control" placeholder="Enter id" ng-model="emblem.id" ng-required="true">
+</div>
+<div class="form-group">
+    <label for="Name">Emblem Name</label>
+    <input name="Name" type="text" class="form-control" placeholder="Enter name" ng-model="emblem.name" ng-required="true">
+</div>
+<div class="form-group">
+    <label for="Spell">Spell</label>
+    <input name="Spell" type="text" class="form-control" placeholder="Enter spell" ng-model="emblem.spell" ng-required="true">
+</div>

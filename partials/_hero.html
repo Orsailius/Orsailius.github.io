@@ -1,0 +1,38 @@
+﻿<div ng-cloak>
+    <div class="horizontalgap" style="height:10px"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="/images/CemeteryFighter/Characters/{{heroes[heroId-1].model}}" style="display: block; margin: 0 auto">
+        </div>
+        <div class="col-md-7">
+            <h1>{{heroes[heroId-1].name}}</h1>
+            <p>{{heroes[heroId-1].description}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2 class="center-block">Level {{level}}</h2>
+            <slider ng-model="level" min="1" step="1" max="100" value="10"></slider>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="horizontalgap" style="height:20px"></div>
+
+    <div class="col-md-10" ng-show="spells">
+        <div ng-repeat="spell in spells">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="{{spell.icon}}" style="width:48px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{spell.name}}</h4>
+                    {{setSpellDescription(spell.description)}}
+                    <jm-spell-description></jm-spell-description>                         
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>

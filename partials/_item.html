@@ -1,0 +1,24 @@
+﻿<div>
+    <div ng-repeat="rar in allRarity">
+        <div class="col-md-10">            
+            <div>
+                <img ng-hide="$first" src="/images/CemeteryFighter/Gem{{rar.arr}}.png" style="height:48px;width:58px;vertical-align:middle" />
+                <h2 style="display:inline;vertical-align:middle">{{getRarityName(rar.arr)}}</h2>
+                <img ng-hide="$first" src="/images/CemeteryFighter/Gem{{rar.arr}}.png" style="height:48px;width:58px;vertical-align:middle" />
+            </div>
+            <hr />
+            <div ng-repeat="item in slotItems | filter:{rarity:rar.arr}">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="/images/CemeteryFighter/{{item.icon}}.png" style="width:48px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{item.name}}</h4>
+                        {{item.description}}
+                    </div>
+                </div>
+                <hr />              
+            </div>
+        </div>
+    </div>
+</div>

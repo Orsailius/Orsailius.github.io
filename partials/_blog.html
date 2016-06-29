@@ -1,0 +1,14 @@
+﻿<div class="col-md-8">
+    <div>
+        <div ng-repeat="entry in blogEntries | orderBy:'id':'true'">
+            <hr />            
+            <h1> {{entry.title}} </h1>
+            <h3> {{entry.date}} </h3>
+            <div>
+                {{setBlogEntry(entry.bodyReference)}}
+                <div ng-include src="bodyLink" include-replace></div>
+            </div>
+            <div class="horizontalgap" style="height:20px"></div>
+        </div>
+    </div>
+</div>

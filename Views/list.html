@@ -1,0 +1,33 @@
+﻿<div>
+
+    <h1>List Emblems</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Spell</th>
+                <th>Description</th>
+                <th>Unlock Method</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emblem in emblems">
+                <td>
+                    <a href="/emblems/edit/{{emblem.id}}" class="btn btn-default btn-xs">edit</a>
+                    <a href="/emblems/delete/{{emblem.id}}" class="btn btn-danger btn-xs">delete</a>
+                </td>
+                <td>{{emblem.name}}</td>
+                <td>{{emblem.spell}}</td>
+                <td>{{emblem.description}}</td>
+                <td>{{emblem.unlockMethod}}</td>
+                <td>{{emblem.symbol}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="/emblems/add" class="btn btn-primary">Add New Emblem</a>
+    </p>
+</div>

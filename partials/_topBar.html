@@ -1,0 +1,41 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Justin Moore</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: mainProject == 'home'}">
+                    <a href="/home/" ng-click="setProject('home','flatly.min.css')">Home </a>
+                </li>
+                <li ng-class="{active: mainProject == 'cemeteryfighter'}">
+                    <a href="/cemeteryfighter/about/" ng-click="setProject('cemeteryfighter','darkly.min.css')">
+                        <img src="images/CemeteryFighter.png" style="width:16px">
+                        Cemetery Fighter
+                    </a>
+                </li>
+                <li ng-class="{active: mainProject == 'elemental'}">
+                    <a href="/elemental/about/" ng-click="setProject('elemental','ele.min.css')">
+                        <img src="images/ElementalFireIcon.png" style="width:16px">
+                        Elemental Fire
+                    </a>
+                </li>                
+                <li ng-class="{active: mainProject == 'other'}">
+                    <a href="/other/about/" ng-click="setProject('other','ele.min.css')">
+                        <img src="images/TileWater.png" style="width:16px">
+                        Other
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

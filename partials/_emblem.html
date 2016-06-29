@@ -1,0 +1,45 @@
+﻿<div>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{currentSpell.icon}}" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="col-md-7">
+            <h1>{{currentSpell.name}}</h1>
+            <jm-spell-description></jm-spell-description>   
+        </div>
+
+    </div>
+    <div class="horizontalgap" style="height:20px"></div>
+    <div class="col-md-10">
+        <div ng-repeat="emblem in emblems" ng-cloak>
+            <div class="media">
+                <div class="media-left media-middle">
+                    <div>
+                        <jm-emblem-icon></jm-emblem-icon>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">{{emblem.name}}</h3>
+                    <h5>
+                        {{emblem.description}}
+                    </h5>
+                    <div>
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <div>
+                                    <img ng-src="{{getUnlockIcon(emblem.unlockMethod)}}" style="width:48px" />
+                                </div>
+                            </div>
+                            <div class="media-body media-middle">
+                                <h5>
+                                    {{getUnlockText(emblem.unlockMethod)}}
+                                </h5>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>
